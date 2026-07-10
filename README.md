@@ -1,46 +1,49 @@
-# fallen-tree-segmentation
-Fallen Tree Stem Detection from UAV Orthomosaic Images using U-Net Semantic Segmentation
-# Fallen Tree Detection using U-Net
+# Fallen Tree Stem Detection from UAV Images
 
-## Project
+## Overview
 
-Detection of fallen tree stems from UAV orthomosaic imagery using semantic segmentation and skeleton analysis.
+This project focuses on detecting fallen tree stems from UAV orthomosaic imagery using deep learning and computer vision techniques.
 
 ## Pipeline
 
-Dataset
-
-↓
-
-Training U-Net
-
-↓
-
+```
+Orthomosaic
+      ↓
+Image Tiling
+      ↓
+Annotation (Roboflow + SAM)
+      ↓
+U-Net (ResNet34)
+      ↓
 Threshold Sweep
-
-↓
-
+      ↓
 Post-processing
-
-↓
-
+      ↓
 Skeletonization
-
-↓
-
-Reconnect
-
-↓
-
+      ↓
+Segment Reconnection
+      ↓
 Evaluation
+```
 
 ## Model
 
 - U-Net
-- ResNet34 encoder
+- ResNet34 Encoder
 
 ## Framework
 
 - PyTorch
+- segmentation_models_pytorch
 - Albumentations
 - OpenCV
+- scikit-image
+
+## Repository Structure
+
+```
+docs/
+figures/
+notebooks/
+src/
+```
