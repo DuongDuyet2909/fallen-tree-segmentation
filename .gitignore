@@ -214,5 +214,28 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 
-# Streamlit
+# ==========================
+# Project-specific ignores
+# ==========================
+
+# Dataset
+dataset/
+data/
+
+# Training outputs
+outputs/
+results/
+runs/
+wandb/
+
+# Model checkpoints
+*.pt
+*.pth
+*.ckpt
+
+# Colab
+.ipynb_checkpoints/
+
+# Logs
+logs/# Streamlit
 .streamlit/secrets.toml
